@@ -295,7 +295,9 @@ export const Tree = React.memo(React.forwardRef((props, ref) => {
     }
 
     React.useImperativeHandle(ref, () => ({
-        filter,
+        filterOption: {
+            filter
+        },
         getElement: () => elementRef.current,
         ...props
     }));
